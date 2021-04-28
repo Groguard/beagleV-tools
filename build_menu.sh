@@ -11,6 +11,7 @@ echo "3: Build opensbi"
 echo "4: Build kernel/clean"
 echo "5: Rebuild kernel"
 echo "6: Build rootfs"
+echo "7: Make Image"
 
 setup_env () {
 	chmod +x scripts/setup_env.sh
@@ -18,6 +19,7 @@ setup_env () {
 	chmod +x scripts/build_opensbi.sh
 	chmod +x scripts/build_kernel.sh
 	chmod +x scripts/build_rootfs.sh
+	chmod +x scripts/make_image.sh
 	scripts/setup_env.sh
 }
 
@@ -41,6 +43,9 @@ build_rootfs () {
 	scripts/build_rootfs.sh
 }
 
+make_image () {
+	scripts/make_image.sh
+}
 
 read -p "Enter selection [1-4] > " option
 
@@ -74,6 +79,11 @@ case $option in
 		clear
 		echo "Preparing to build rootfs.."
 		build_rootfs
+		;;
+	7) 
+		clear
+		echo "Preparing to make sd image.."
+		make_image
 		;;
 	*)
 		echo "No Option Selected, exiting.."
