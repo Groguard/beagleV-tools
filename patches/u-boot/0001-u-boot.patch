@@ -1,0 +1,10 @@
+--- a/arch/arm/dts/Makefile	2020-12-15 02:43:25.397362938 +0000
++++ b/arch/arm/dts/Makefile	2020-12-15 02:42:29.363200436 +0000
+@@ -688,6 +688,7 @@
+ 	mt7623n-bananapi-bpi-r2.dtb \
+ 	mt7629-rfb.dtb
+ 
++dtb-y += moonwurm.dtb
+ targets += $(dtb-y)
+ 
+ # Add any required device tree compiler flags here

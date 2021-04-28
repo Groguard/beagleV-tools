@@ -1,0 +1,5 @@
+output/
+tools/
+patches/kernel/*/.external-patches
+patches/rootfs/usbgadget
+patches/rootfs/usbgadget.service
