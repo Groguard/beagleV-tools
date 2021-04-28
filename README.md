@@ -1,6 +1,5 @@
 # beagleV-tools
 
-git clone https://github.com/Groguard/beagleV-tools.git
 After downloading you want to then enter the directory beagleV-tools.
 
 cd beagleV-tools
