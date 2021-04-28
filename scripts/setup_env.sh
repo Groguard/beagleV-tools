@@ -22,10 +22,10 @@ echo ${release}
 case ${release} in
 debian|ubuntu)
 	apt install -y \
-	autoconf automake autotools-dev curl python3 libmpc-dev \
+	autoconf automake autotools-dev curl python3 libmpc-dev pkg-config \
 	libmpfr-dev libgmp-dev gawk build-essential bison flex texinfo \
 	gperf libtool patchutils libncurses-dev libssl-dev bc zlib1g-dev \
-	libexpat-dev qemu-user-static binfmt-support debootstrap \
+	libexpat-dev libelf-dev qemu-user-static binfmt-support debootstrap \
 	device-tree-compiler debian-ports-archive-keyring
 	;;
 esac
