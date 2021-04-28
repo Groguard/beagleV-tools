@@ -67,5 +67,4 @@ echo "copying kernel files"
 
 # copy the kernel zImage and giantboard dtb to our images directory
 cp ${linux_dir}/arch/riscv/boot/zImage ${images_dir}/
-cp ${linux_dir}/arch/riscv/dts/starfive_vic7100_evb.dtb ${images_dir}/
 echo "complete!"
