@@ -58,6 +58,7 @@ built_release="$(${cross_make} --no-print-directory -s kernelrelease 2>/dev/null
 
 # build the dtb's, modules, and headers
 ${cross_make} -j"${cores}"
+${cross_make} Image
 DTC_FLAGS="-@" ${cross_make} dtbs -j"${cores}"
 
 
@@ -66,5 +67,5 @@ echo "copying kernel files"
 
 
 # copy the kernel zImage and giantboard dtb to our images directory
-cp ${linux_dir}/arch/riscv/boot/zImage ${images_dir}/
+cp ${linux_dir}/arch/riscv/boot/Image ${images_dir}/
 echo "complete!"
