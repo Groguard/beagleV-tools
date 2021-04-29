@@ -67,7 +67,7 @@ cp -v ${images_dir}/Image /media/boot/Image
 
 # copy kernel dtbs
 mkdir -p /media/boot/dtbs/
-cp -v ${images_dir}/at91-sama5d27_giantboard.dtb /media/boot/dtbs/
+cp -v ${uboot_bin}/starfive_vic7100_beagle_v.dtb /media/boot/dtbs/
 
 # copy kernel modules
 cp -av ${modules_dir}/lib/ /media/rootfs/
