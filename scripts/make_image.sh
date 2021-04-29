@@ -63,7 +63,7 @@ chown root:root /media/rootfs/
 chmod 755 /media/rootfs/
 
 # copy kernel image
-cp -v ${images_dir}/zImage /media/boot/zImage
+cp -v ${images_dir}/Image /media/boot/Image
 
 # copy kernel dtbs
 mkdir -p /media/boot/dtbs/
