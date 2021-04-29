@@ -9,10 +9,11 @@ patch_dir="$(pwd)/patches/u-boot"
 output_dir="$(pwd)/output"
 tools_dir="$(pwd)/tools"
 build_dir="${output_dir}/build"
+uboot_bin="${output_dir}/u-boot"
 opensbi_bin="${output_dir}/opensbi"
 opensbi_dir="${build_dir}/beagle_opensbi"
 
-CC="riscv64-unknown-elf-"
+CC="${tools_dir}/compiler/bin/riscv64-unknown-linux-gnu-"
 release="Fedora"
 
 cross_make="make -C ${opensbi_dir} ARCH=riscv CROSS_COMPILE=${CC}"
@@ -27,4 +28,5 @@ fi
 
 git -C ${build_dir} clone https://github.com/starfive-tech/beagle_opensbi.git -b ${release}
 
-${cross_make} -j"${cores}" PLATFORM=starfive/vic7100 O=${opensbi_bin}
+${cross_make} -j"${cores}" PLATFORM=starfive/vic7100 FW_PAYLOAD_PATH=${uboot_bin}/u-boot.bin FW_PAYLOAD_FDT_PATH={uboot_bin}/starfive_vic7100_beagle_v.dtb O=${opensbi_bin}
+
