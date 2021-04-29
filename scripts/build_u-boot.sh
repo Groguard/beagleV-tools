@@ -37,8 +37,8 @@ git -C ${build_dir} clone https://github.com/starfive-tech/beagle_uboot-opensbi.
 echo "starting u-boot build.."
 ${cross_make} -j"${cores}" distclean
 ${cross_make} -j"${cores}" starfive_vic7100_beagle_v_smode_defconfig
-${cross_make} -j"${cores}"
+${cross_make} -j"${cores}" u-boot.bin u-boot.dtb
 
 cp -v ${uboot_dir}/u-boot.bin ${uboot_bin}
-cp -v ${uboot_dir}/arch/riscv/dts/starfive_vic7100_beagle_v.dtb ${uboot_bin}
+cp -v ${uboot_dir}/u-boot.dtb ${uboot_bin}
 echo "finished building u-boot"

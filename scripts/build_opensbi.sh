@@ -28,5 +28,5 @@ fi
 
 git -C ${build_dir} clone https://github.com/starfive-tech/beagle_opensbi.git -b ${release}
 
-${cross_make} -j"${cores}" PLATFORM=starfive/vic7100 FW_PAYLOAD_PATH=${uboot_bin}/u-boot.bin FW_PAYLOAD_FDT_PATH={uboot_bin}/starfive_vic7100_beagle_v.dtb O=${opensbi_bin}
+${cross_make} -j"${cores}" PLATFORM=starfive/vic7100 FW_PAYLOAD_PATH=${uboot_bin}/u-boot.bin FW_PAYLOAD_FDT_PATH={uboot_bin}/u-boot.dtb O=${opensbi_bin}
 
