@@ -40,5 +40,5 @@ ${cross_make} -j"${cores}" starfive_vic7100_beagle_v_smode_defconfig
 ${cross_make} -j"${cores}"
 
 cp -v ${uboot_dir}/u-boot.bin ${uboot_bin}
-
+cp -v ${uboot_dir}/arch/riscv/dts/starfive_vic7100_beagle_v.dtb ${uboot_bin}
 echo "finished building u-boot"
