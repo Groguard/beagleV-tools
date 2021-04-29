@@ -66,6 +66,6 @@ echo "done building.."
 echo "copying kernel files"
 
 
-# copy the kernel zImage and giantboard dtb to our images directory
+# copy the kernel Image to our images directory
 cp ${linux_dir}/arch/riscv/boot/Image ${images_dir}/
 echo "complete!"
